@@ -1,0 +1,331 @@
+<!-- nike.html -->
+{% extends 'base.html' %} <!-- ใช้ base.html เป็น template หลัก -->
+
+{% block content %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background: url('images/hero-bg.jpg') no-repeat center center/cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-shop-now {
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-shop-now:hover {
+        background-color: #ff4a3d;
+    }
+
+    /* Featured Products Section */
+    .featured-products {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .featured-products h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .product-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card .btn-add-to-cart {
+        margin-top: auto;
+    }
+
+    .product-card img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .product-card p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ff6f61;
+        margin-bottom: 15px;
+    }
+
+    .btn-add-to-cart {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
+    .btn-add-to-cart:hover {
+        background-color: #555;
+    }
+
+    /* Brand Section */
+    .brand-section {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .brand-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .brand-logos {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .brand-logos img {
+        max-width: 100px;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .brand-logos img:hover {
+        opacity: 1;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: #ff6f61;
+        color: #fff;
+    }
+
+    .newsletter-section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-section p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-section form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .newsletter-section input[type="email"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 250px;
+        font-size: 1rem;
+    }
+
+    .newsletter-section button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .newsletter-section button:hover {
+        background-color: #555;
+    }
+</style>
+
+<!-- Featured Products Section -->
+<section id="featured-products" class="featured-products">
+    <h1>Puma Shoes Collection</h1>
+    <p>ค้นหารองเท้า Puma ในสไตล์ที่คุณชอบ</p>
+   
+    <div class="product-grid">
+
+        <!-- PUMA EVOLUTION RS-Z LTH -->
+        <div class="product-card">
+            <img src="puma-evolution-rs-z-lth.jpg" alt="PUMA EVOLUTION RS-Z LTH">
+            <h3>PUMA EVOLUTION RS-Z LTH</h3>
+            <p>รองเท้ากีฬาสไตล์คลาสสิกที่มาพร้อมดีไซน์เรียบหรู โทนสีขาว สามารถรองรับแรงกระแทกได้ดี บุภายในนุ่มสบายเท้า</p>
+            <p class="price">4,704 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA First Mile Hybrid NX Ozone -->
+        <div class="product-card">
+            <img src="puma-first-mile-hybrid-nx-ozone.jpg" alt="PUMA First Mile Hybrid NX Ozone">
+            <h3>PUMA First Mile Hybrid NX Ozone</h3>
+            <p>รองเท้าออกกำลังกายที่ผลิตจากผ้าทอและวัสดุสังเคราะห์ น้ำหนักเบา สวมใส่สบาย มาพร้อมเทคโนโลยีโฟม HYBRID ที่ผสมผสานระหว่างโฟม IGNITE และ NRGY เพื่อความนุ่มสบายและรองรับแรงกระแทก</p>
+            <p class="price">3,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA Basics - Rebound Lay Up -->
+        <div class="product-card">
+            <img src="puma-basics-rebound-lay-up.jpg" alt="PUMA Basics - Rebound Lay Up">
+            <h3>PUMA Basics - Rebound Lay Up</h3>
+            <p>รองเท้าสไตล์บาสเกตบอลที่มีดีไซน์ทันสมัย ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้าทนทาน เหมาะสำหรับการสวมใส่ในชีวิตประจำวัน</p>
+            <p class="price">2,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA EVOLUTION - Cali Dream Go -->
+        <div class="product-card">
+            <img src="puma-evolution-cali-dream-go.jpg" alt="PUMA EVOLUTION - Cali Dream Go">
+            <h3>PUMA EVOLUTION - Cali Dream Go</h3>
+            <p>รองเท้าผ้าใบสำหรับผู้หญิงที่มีดีไซน์น่ารัก พื้นรองเท้ามั่นคง วัสดุแข็งแรง สวมใส่สบาย เหมาะสำหรับการออกกำลังกายหรือสวมใส่เป็นแฟชั่น</p>
+            <p class="price">3,520 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA RS-2K VON DUTCH -->
+        <div class="product-card">
+            <img src="puma-rs-2k-von-dutch.jpg" alt="PUMA RS-2K VON DUTCH">
+            <h3>PUMA RS-2K VON DUTCH</h3>
+            <p>รองเท้ารุ่นพิเศษที่ร่วมมือกับแบรนด์ VON DUTCH มาพร้อมดีไซน์โดดเด่น สีสันสดใส พื้นรองเท้าสบาย เหมาะสำหรับผู้ที่ชื่นชอบสไตล์แฟชั่น</p>
+            <p class="price">4,000 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA Roma Heart Metallic Wns -->
+        <div class="product-card">
+            <img src="puma-roma-heart-metallic-wns.jpg" alt="PUMA Roma Heart Metallic Wns">
+            <h3>PUMA Roma Heart Metallic Wns</h3>
+            <p>รองเท้าสไตล์วินเทจที่มาพร้อมดีไซน์หวานด้วยโบว์และสีเมทัลลิก ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้านุ่มสบาย</p>
+            <p class="price">3,000 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA KIDS - Rickie Alternative Closure -->
+        <div class="product-card">
+            <img src="puma-kids-rickie-alternative-closure.jpg" alt="PUMA KIDS - Rickie Alternative Closure">
+            <h3>PUMA KIDS - Rickie Alternative Closure</h3>
+            <p>รองเท้าสำหรับเด็กที่ออกแบบมาเพื่อความสะดวกสบาย มีระบบปิดแบบแถบเวลโคร สวมใส่ง่าย วัสดุทนทาน</p>
+            <p class="price">1,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA EVOLUTION RS-Fast Limiter -->
+        <div class="product-card">
+            <img src="puma-evolution-rs-fast-limiter.jpg" alt="PUMA EVOLUTION RS-Fast Limiter">
+            <h3>PUMA EVOLUTION RS-Fast Limiter</h3>
+            <p>รองเท้ากีฬาที่มาพร้อมดีไซน์ทันสมัย สีสันสดใส พื้นรองเท้ารองรับแรงกระแทกได้ดี เหมาะสำหรับการออกกำลังกายและสวมใส่ในชีวิตประจำวัน</p>
+            <p class="price">4,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA EVOLUTION - Pulsar Wedge Tonal -->
+        <div class="product-card">
+            <img src="puma-evolution-pulsar-wedge-tonal.jpg" alt="PUMA EVOLUTION - Pulsar Wedge Tonal">
+            <h3>PUMA EVOLUTION - Pulsar Wedge Tonal</h3>
+            <p>รองเท้าส้นตึกที่มาพร้อมดีไซน์โฉบเฉี่ยว สีสันโมโนโทน ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้าทนทาน เหมาะสำหรับผู้ที่ต้องการความสูงและสไตล์</p>
+            <p class="price">3,800 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- PUMA Storm Adrenaline -->
+        <div class="product-card">
+            <img src="puma-storm-adrenaline.jpg" alt="PUMA Storm Adrenaline">
+            <h3>PUMA Storm Adrenaline</h3>
+            <p>รองเท้ากีฬาที่มีดีไซน์โดดเด่น ผลิตจากผ้าตาข่ายและวัสดุสังเคราะห์ น้ำหนักเบา พื้นรองเท้ารองรับแรงกระแทกได้ดี เหมาะสำหรับการออกกำลังกายและสวมใส่ในชีวิตประจำวัน</p>
+            <p class="price">3,000 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+    </div>
+</section>
+
+<!-- Brand Section -->
+<section class="brand-section">
+    <h2>แบรนด์ยอดนิยม</h2>
+    <div class="brand-logos">
+        <img src="images/nike-logo.png" alt="Nike">
+        <img src="images/adidas-logo.png" alt="Adidas">
+        <img src="images/converse-logo.png" alt="Converse">
+        <img src="images/puma-logo.png" alt="Puma">
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <h2>สมัครรับข่าวสารจากเรา</h2>
+    <p>รับส่วนลดพิเศษและอัปเดตสินค้าใหม่ก่อนใคร</p>
+    <form>
+        <input type="email" placeholder="อีเมลของคุณ" required>
+        <button type="submit">สมัคร</button>
+    </form>
+</section>
+{% endblock %}

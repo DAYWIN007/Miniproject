@@ -1,0 +1,63 @@
+<style>
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* จัดให้ปุ่มอื่นอยู่ซ้าย และปุ่มค้นหาอยู่ขวา */
+        margin-top: 10px;
+    }
+    .nav-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+    }
+    .nav-links a:hover {
+        background-color: rgb(255, 255, 255);
+    }
+    .nav-links a i {
+        margin-right: 5px;
+    }
+    .search-box {
+        display: flex;
+        align-items: center;
+    }
+    .search-box input[type="text"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 5px;
+    }
+    .search-box button {
+        padding: 8px 12px;
+        background-color: #3333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .search-box button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<header>
+    <div class="title">
+        
+    </div>
+    
+    <div class="nav-links">
+        <div class="left-links">
+            <img src="\static\logo.png" style="height: 60px; width:60px;">
+            <a href="/index" class="btn">หน้าแรก</a>
+            <a href="/allpro" class="btn">สินค้า</a>
+            <a href="/about" class="btn">เกี่ยวกับเรา</a>
+            <a href="/contact" class="btn">ติดต่อเรา</a>
+            <a href="/cart" class="btn">
+                <i class="fas fa-shopping-cart"></i> ตระกร้า
+            </a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="ค้นหา...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</header>

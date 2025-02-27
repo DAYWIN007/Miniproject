@@ -1,0 +1,331 @@
+<!-- nike.html -->
+{% extends 'base.html' %} <!-- ใช้ base.html เป็น template หลัก -->
+
+{% block content %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background: url('images/hero-bg.jpg') no-repeat center center/cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-shop-now {
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-shop-now:hover {
+        background-color: #ff4a3d;
+    }
+
+    /* Featured Products Section */
+    .featured-products {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .featured-products h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .product-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card .btn-add-to-cart {
+        margin-top: auto;
+    }
+
+    .product-card img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .product-card p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ff6f61;
+        margin-bottom: 15px;
+    }
+
+    .btn-add-to-cart {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
+    .btn-add-to-cart:hover {
+        background-color: #555;
+    }
+
+    /* Brand Section */
+    .brand-section {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .brand-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .brand-logos {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .brand-logos img {
+        max-width: 100px;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .brand-logos img:hover {
+        opacity: 1;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: #ff6f61;
+        color: #fff;
+    }
+
+    .newsletter-section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-section p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-section form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .newsletter-section input[type="email"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 250px;
+        font-size: 1rem;
+    }
+
+    .newsletter-section button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .newsletter-section button:hover {
+        background-color: #555;
+    }
+</style>
+
+<!-- Featured Products Section -->
+<section id="featured-products" class="featured-products">
+    <h1>Nike Shoes Collection</h1>
+    <p>ค้นหารองเท้า Nike ในสไตล์ที่คุณชอบ</p>
+    
+    <div class="product-grid">
+
+        <!-- Air Force 1 -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\Air Force 1.jpg" alt="Air Force 1">
+            <h3>Air Force 1</h3>
+            <p>รองเท้ารุ่นคลาสสิกที่มีดีไซน์เรียบหรู ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้าทนทาน</p>
+            <p class="price">3,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- Air Max 270 -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\Air Max 270.jpg" alt="Air Max 270">
+            <h3>Air Max 270</h3>
+            <p>มาพร้อมกับเทคโนโลยี Air Max ที่ส้นเท้า ให้ความนุ่มสบายขณะสวมใส่</p>
+            <p class="price">5,200 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- Dunk Low -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\Dunk low.jpg" alt="Dunk Low">
+            <h3>Dunk Low</h3>
+            <p>รองเท้าสไตล์สเก็ตบอร์ดที่ได้รับความนิยม มีหลากหลายสีสัน</p>
+            <p class="price">4,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- Blazer Mid '77 -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\Blazer Mid _77.jpg" alt="Blazer Mid '77">
+            <h3>Blazer Mid '77</h3>
+            <p>รองเท้าหุ้มข้อสไตล์วินเทจ ผลิตจากหนังคุณภาพสูง</p>
+            <p class="price">3,800 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- React Infinity Run Flyknit -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\React Infinity Run Flyknit.jpg" alt="React Infinity Run Flyknit">
+            <h3>React Infinity Run Flyknit</h3>
+            <p>รองเท้าวิ่งที่ออกแบบมาเพื่อความนุ่มสบายและลดการบาดเจ็บ</p>
+            <p class="price">6,000 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- ZoomX Vaporfly NEXT% -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\ZoomX Vaporfly NEXT_.jpg" alt="ZoomX Vaporfly NEXT%">
+            <h3>ZoomX Vaporfly NEXT%</h3>
+            <p>รองเท้าวิ่งมาราธอนที่ใช้เทคโนโลยี ZoomX เพื่อความเร็ว</p>
+            <p class="price">9,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- Pegasus Trail 3 -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\Pegasus Trail 3.jpg" alt="Pegasus Trail 3">
+            <h3>Pegasus Trail 3</h3>
+            <p>รองเท้าวิ่งเทรลที่ทนทานและยึดเกาะดีเยี่ยม</p>
+            <p class="price">4,700 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- Free RN 5.0 -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\Free RN 5.0.jpg" alt="Free RN 5.0">
+            <h3>Free RN 5.0</h3>
+            <p>รองเท้าวิ่งน้ำหนักเบา ออกแบบมาเพื่อความยืดหยุ่น</p>
+            <p class="price">3,900 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- Air Zoom Pegasus 38 -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\Air Zoom Pegasus 38.jpg" alt="Air Zoom Pegasus 38">
+            <h3>Air Zoom Pegasus 38</h3>
+            <p>รองเท้าวิ่งยอดนิยมที่มอบความสบายและรองรับแรงกระแทก</p>
+            <p class="price">4,500 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <!-- SB Zoom Stefan Janoski -->
+        <div class="product-card">
+            <img src="\static\shoes\Nike\SB Zoom Stefan Janoski.jpg" alt="SB Zoom Stefan Janoski">
+            <h3>SB Zoom Stefan Janoski</h3>
+            <p>รองเท้าสเก็ตบอร์ดที่มีดีไซน์เรียบง่ายและทนทาน</p>
+            <p class="price">3,200 บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+    </div>
+</section>
+
+<!-- Brand Section -->
+<section class="brand-section">
+    <h2>แบรนด์ยอดนิยม</h2>
+    <div class="brand-logos">
+        <img src="images/nike-logo.png" alt="Nike">
+        <img src="images/adidas-logo.png" alt="Adidas">
+        <img src="images/converse-logo.png" alt="Converse">
+        <img src="images/puma-logo.png" alt="Puma">
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <h2>สมัครรับข่าวสารจากเรา</h2>
+    <p>รับส่วนลดพิเศษและอัปเดตสินค้าใหม่ก่อนใคร</p>
+    <form>
+        <input type="email" placeholder="อีเมลของคุณ" required>
+        <button type="submit">สมัคร</button>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% comment %} {% load crispy_form_tags %}
+<div class ='row'>
+    <div class ='col-lg-6 offset-3'>
+        <h1> login </h1>
+        <form method='post' novalidate>
+             {% csrf_token %}
+            {{ form|crispy }}
+            <button type = 'summit' class='btn btn-primary'>login</button>
+        </form>
+    </div>
+</div> {% endcomment %}
