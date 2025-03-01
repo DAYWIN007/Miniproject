@@ -3,308 +3,265 @@
 
 {% block content %}
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-      body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f9f9f9;
-      }
-      
-      /* Hero Section */
-      .hero-section {
-        background: url('images/hero-bg.jpg') no-repeat center center/cover;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #fff;
-      }
-      
-      .hero-content h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-      
-      .hero-content p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-      }
-      
-      .btn-shop-now {
-        background-color: #ff6f61;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      
-      .btn-shop-now:hover {
-        background-color: #ff4a3d;
-      }
-      
-      /* Featured Products Section */
-      .featured-products {
-        padding: 40px 20px;
-        text-align: center;
-      }
-      
-      .featured-products h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-      
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-      }
-      
-      .product-card {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        display: flex; /* เพิ่มบรรทัดนี้ */
-        flex-direction: column; /* เพิ่มบรรทัดนี้ */
-        height: 100%; /* เพิ่มบรรทัดนี้ */
-      }
-      
-      .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-      .product-card .btn-add-to-cart {
-        margin-top: auto; /* เพิ่มบรรทัดนี้ */
-      }
-      
-      .product-card img {
-        max-width: 100%;
-        border-radius: 10px;
-        margin-bottom: 15px;
-      }
-      
-      .product-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-      }
-      
-      .product-card p {
-        font-size: 0.9rem;
-        color: #666;
-        margin-bottom: 10px;
-      }
-      
-      .price {
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #ff6f61;
-        margin-bottom: 15px;
-      }
-      .btn-add-to-cart {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        width: 100%; /* เพิ่มบรรทัดนี้ */
-        max-width: 150px; /* เพิ่มบรรทัดนี้ */
-        margin: 0 auto; /* เพิ่มบรรทัดนี้ */
-        
-      }
-      
-      
-      .btn-add-to-cart:hover {
-        background-color: #555;
-      }
-      
-      /* Brand Section */
-      .brand-section {
-        padding: 40px 20px;
-        text-align: center;
-        background-color: #fff;
-      }
-      
-      .brand-section h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-      
-      .brand-logos {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-      }
-      
-      .brand-logos img {
-        max-width: 100px;
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-      }
-      
-      .brand-logos img:hover {
-        opacity: 1;
-      }
-      
-      /* Newsletter Section */
-      .newsletter-section {
-        padding: 40px 20px;
-        text-align: center;
-        background-color: #ff6f61;
-        color: #fff;
-      }
-      
-      .newsletter-section h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-      
-      .newsletter-section p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-      }
-      
-      .newsletter-section form {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-      }
-      
-      .newsletter-section input[type="email"] {
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        width: 250px;
-        font-size: 1rem;
-      }
-      
-      .newsletter-section button {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      
-      .newsletter-section button:hover {
-        background-color: #555;
-      }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-shop-now {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-shop-now:hover {
+    background-color: #ff4a3d;
+  }
+
+  /* Featured Products Section */
+  .featured-products {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    /* เพิ่มบรรทัดนี้ */
+    flex-direction: column;
+    /* เพิ่มบรรทัดนี้ */
+    height: 100%;
+    /* เพิ่มบรรทัดนี้ */
+  }
+
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card .btn-add-to-cart {
+    margin-top: auto;
+    /* เพิ่มบรรทัดนี้ */
+  }
+
+  .product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-bottom: 15px;
+  }
+
+  .btn-add-to-cart {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    /* เพิ่มบรรทัดนี้ */
+    max-width: 150px;
+    /* เพิ่มบรรทัดนี้ */
+    margin: 0 auto;
+    /* เพิ่มบรรทัดนี้ */
+
+  }
+
+
+  .btn-add-to-cart:hover {
+    background-color: #555;
+  }
+
+  /* Brand Section */
+  .brand-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .brand-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .brand-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .brand-logos img {
+    max-width: 100px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .brand-logos img:hover {
+    opacity: 1;
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ff6f61;
+    color: #fff;
+  }
+
+  .newsletter-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .newsletter-section input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 1rem;
+  }
+
+  .newsletter-section button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .newsletter-section button:hover {
+    background-color: #555;
+  }
 </style>
+
+<!-- Featured Products Section -->
+<section id="featured-products" class="featured-products">
+  <h1>ยินดีต้อนรับสู่ร้านรองเท้าออนไลน์</h1>
+  <p>ค้นหารองเท้าแบรนด์ดังในสไตล์ที่คุณชอบ</p>
+  <h2>สินค้าแนะนำ</h2>
+
   
-  <!-- Featured Products Section -->
-  <section id="featured-products" class="featured-products">
-    <h1>ยินดีต้อนรับสู่ร้านรองเท้าออนไลน์</h1>
-      <p>ค้นหารองเท้าแบรนด์ดังในสไตล์ที่คุณชอบ</p>
-    <h2>สินค้าแนะนำ</h2>
-    <div class="product-grid">
-  
-      <!-- Nike -->
-      <div class="product-card">
-        <img src="\static\shoes\Nike\Air Force 1.jpg" alt="Nike Air Force 1">
-        <h3>Nike Air Force 1</h3>
-        <p>รองเท้ารุ่นคลาสสิกที่มีดีไซน์เรียบหรู ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้าทนทาน</p>
-        <p class="price">3,500 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+
+
+      <div class="product-grid">
+        {% for product in product_list %}
+        <div class="product-card">
+          <img src="{{product.images}}">
+          <h3>{{product.proname}}</h3>
+          <p>{{product.detail}}</p>
+          <p class="price">{{product.price}} บาท</p>
+          <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+        {% endfor %}
+        <!-- Nike -->
+       
+
+
       </div>
-  
-      <div class="product-card">
-        <img src="\static\shoes\Nike\Air Max 270.jpg" alt="Nike Air Max 270">
-        <h3>Nike Air Max 270</h3>
-        <p>มาพร้อมกับเทคโนโลยี Air Max ที่ส้นเท้า ให้ความนุ่มสบายขณะสวมใส่</p>
-        <p class="price">5,200 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-      </div>
-  
-      <!-- Adidas -->
-      <div class="product-card">
-        <img src="\static\shoes\Adidas\Superstar.jpg" alt="Adidas Superstar">
-        <h3>Adidas Superstar</h3>
-        <p>รองเท้ารุ่นตำนานที่มีหัวรองเท้าเปลือกหอย ดีไซน์คลาสสิก</p>
-        <p class="price">3,500 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-      </div>
-  
-      <div class="product-card">
-        <img src="\static\shoes\Adidas\Ultraboost 21.jpg" alt="Adidas Ultraboost 21">
-        <h3>Adidas Ultraboost 21</h3>
-        <p>รองเท้าวิ่งที่มาพร้อมกับเทคโนโลยี Boost เพื่อความนุ่มสบาย</p>
-        <p class="price">6,500 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-      </div>
-  
-      <!-- Converse -->
-      <div class="product-card">
-        <img src="\static\shoes\Converse\Chuck Taylor All Star.jpg" alt="Converse Chuck Taylor All Star">
-        <h3>Converse Chuck Taylor All Star</h3>
-        <p>รองเท้าผ้าใบคลาสสิกที่มีดีไซน์เรียบง่าย สวมใส่สบาย</p>
-        <p class="price">2,000 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-      </div>
-  
-      <div class="product-card">
-        <img src="\static\shoes\Converse\Run Star Hike.jpg" alt="Converse Run Star Hike">
-        <h3>Converse Run Star Hike</h3>
-        <p>รองเท้าผ้าใบที่มาพร้อมพื้นรองเท้าหนาและดีไซน์ทันสมัย</p>
-        <p class="price">3,500 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-      </div>
-  
-      <!-- Puma -->
-      <div class="product-card">
-        <img src="\static\shoes\Puma\PUMA EVOLUTION RS-Z LTH.jpg" alt="PUMA EVOLUTION RS-Z LTH">
-        <h3>PUMA EVOLUTION RS-Z LTH</h3>
-        <p>รองเท้ากีฬาสไตล์คลาสสิกที่มาพร้อมดีไซน์เรียบหรู โทนสีขาว</p>
-        <p class="price">4,704 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-      </div>
-  
-      <div class="product-card">
-        <img src="\static\shoes\Puma\PUMA RS-2K VON DUTCH.jpg" alt="PUMA RS-2K VON DUTCH">
-        <h3>PUMA RS-2K VON DUTCH</h3>
-        <p>รองเท้ารุ่นพิเศษที่ร่วมมือกับแบรนด์ VON DUTCH มาพร้อมดีไซน์โดดเด่น</p>
-        <p class="price">4,000 บาท</p>
-        <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-      </div>
-  
-    </div>
-  </section>
-  
-  <!-- Brand Section -->
-  <section class="brand-section">
-    <h2>แบรนด์ยอดนิยม</h2>
-    <div class="brand-logos">
-      <img src="images/nike-logo.png" alt="Nike">
-      <img src="images/adidas-logo.png" alt="Adidas">
-      <img src="images/converse-logo.png" alt="Converse">
-      <img src="images/puma-logo.png" alt="Puma">
-    </div>
-  </section>
-  
-  <!-- Newsletter Section -->
-  <section class="newsletter-section">
-    <h2>สมัครรับข่าวสารจากเรา</h2>
-    <p>รับส่วนลดพิเศษและอัปเดตสินค้าใหม่ก่อนใคร</p>
-    <form>
-      <input type="email" placeholder="อีเมลของคุณ" required>
-      <button type="submit">สมัคร</button>
-    </form>
-  </section>
+</section>
+
+<!-- Brand Section -->
+<section class="brand-section">
+  <h2>แบรนด์ยอดนิยม</h2>
+  <div class="brand-logos">
+    <img src="images/nike-logo.png" alt="Nike">
+    <img src="images/adidas-logo.png" alt="Adidas">
+    <img src="images/converse-logo.png" alt="Converse">
+    <img src="images/puma-logo.png" alt="Puma">
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+  <h2>สมัครรับข่าวสารจากเรา</h2>
+  <p>รับส่วนลดพิเศษและอัปเดตสินค้าใหม่ก่อนใคร</p>
+  <form>
+    <input type="email" placeholder="อีเมลของคุณ" required>
+    <button type="submit">สมัคร</button>
+  </form>
+</section>
 {% endblock %}

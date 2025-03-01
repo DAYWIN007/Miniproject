@@ -1,4 +1,4 @@
-<!-- nike.html -->
+<!-- onitsakaTiger.html -->
 {% extends 'base.html' %} <!-- ใช้ base.html เป็น template หลัก -->
 
 {% block content %}
@@ -211,29 +211,21 @@
 
 <!-- Featured Products Section -->
 <section id="featured-products" class="featured-products">
-    <h1>Adidas Shoes Collection</h1>
-    <p>ค้นหารองเท้า Adidas ในสไตล์ที่คุณชอบ</p>
+    <h1>OnitsukaTiger Shoes Collection</h1>
+    <p>ค้นหารองเท้า OnitsukaTiger ในสไตล์ที่คุณชอบ</p>
     
     <div class="product-grid">
-
-        <div class="product-grid">
-            {% for product in product_list %}
-            <div class="product-card">
-              <img src="{{product.images}}">
-              <h3>{{product.proname}}</h3>
-              <p>{{product.detail}}</p>
-              <p class="price">{{product.price}} บาท</p>
-              <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-            </div>
-            {% endfor %}
-            
-           
-    
-    
-          </div>
-
-       
+        {% for product in product_list %}
+        <div class="product-card">
+            <img src="{{ product.images }}">
+            <h3>{{ product.proname }}</h3>
+            <p>{{ product.detail }}</p>
+            <p class="price">{{ product.price }} บาท</p>
+            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        </div>
+        {% endfor %}
     </div>
+    
 </section>
 
 <!-- Brand Section -->
