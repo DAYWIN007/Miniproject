@@ -27,6 +27,8 @@ def index_page(request):
         detail = request.POST.get('detail')
         price = request.POST.get('price')
         
+        
+        
         file = request.FILES.get('images')
         images_base64 = ''
         if file:

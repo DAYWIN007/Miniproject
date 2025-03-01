@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Product:
     def __init__(self,brand,proid,images,proname,detail,price):
