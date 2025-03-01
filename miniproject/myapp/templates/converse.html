@@ -215,95 +215,22 @@
     <p>ค้นหารองเท้า Converse ในสไตล์ที่คุณชอบ</p>
     <div class="product-grid">
 
-        <!-- Chuck Taylor All Star -->
-        <div class="product-card">
-            <img src="chuck-taylor-all-star.jpg" alt="Chuck Taylor All Star">
-            <h3>Chuck Taylor All Star</h3>
-            <p>รองเท้าผ้าใบคลาสสิกที่มีดีไซน์เรียบง่าย สวมใส่สบาย</p>
-            <p class="price">2,000 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- One Star -->
-        <div class="product-card">
-            <img src="one-star.jpg" alt="One Star">
-            <h3>One Star</h3>
-            <p>รองเท้าผ้าใบที่มีสัญลักษณ์รูปดาวด้านข้าง ดีไซน์เท่</p>
-            <p class="price">2,500 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- Jack Purcell -->
-        <div class="product-card">
-            <img src="jack-purcell.jpg" alt="Jack Purcell">
-            <h3>Jack Purcell</h3>
-            <p>รองเท้าผ้าใบหัวยิ้มที่มีเอกลักษณ์เฉพาะตัว</p>
-            <p class="price">2,700 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- Pro Leather -->
-        <div class="product-card">
-            <img src="pro-leather.jpg" alt="Pro Leather">
-            <h3>Pro Leather</h3>
-            <p>รองเท้าหนังที่ออกแบบมาสำหรับนักบาสเกตบอล</p>
-            <p class="price">3,000 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- All Star 70 -->
-        <div class="product-card">
-            <img src="all-star-70.jpg" alt="All Star 70">
-            <h3>All Star 70</h3>
-            <p>รองเท้ารุ่นพิเศษที่นำดีไซน์จากยุค 70 กลับมาผลิตใหม่ วัสดุคุณภาพสูง</p>
-            <p class="price">3,290 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- Run Star Hike -->
-        <div class="product-card">
-            <img src="run-star-hike.jpg" alt="Run Star Hike">
-            <h3>Run Star Hike</h3>
-            <p>รองเท้าผ้าใบที่มาพร้อมพื้นรองเท้าหนาและดีไซน์ทันสมัย เหมาะสำหรับการแต่งตัวสไตล์สตรีท</p>
-            <p class="price">3,500 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- Chuck 70 Vintage Canvas -->
-        <div class="product-card">
-            <img src="chuck-70-vintage-canvas.jpg" alt="Chuck 70 Vintage Canvas">
-            <h3>Chuck 70 Vintage Canvas</h3>
-            <p>รองเท้ารุ่นพิเศษที่ใช้วัสดุแคนวาสคุณภาพสูงและดีไซน์วินเทจ</p>
-            <p class="price">3,200 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- Weapon CX -->
-        <div class="product-card">
-            <img src="weapon-cx.jpg" alt="Weapon CX">
-            <h3>Weapon CX</h3>
-            <p>รองเท้าบาสเกตบอลที่มาพร้อมเทคโนโลยี CX เพื่อความสบายในการสวมใส่</p>
-            <p class="price">3,800 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- ERX 260 -->
-        <div class="product-card">
-            <img src="erx-260.jpg" alt="ERX 260">
-            <h3>ERX 260</h3>
-            <p>รองเท้าสไตล์ย้อนยุคที่ได้รับแรงบันดาลใจจากยุค 90 ดีไซน์โดดเด่น</p>
-            <p class="price">3,900 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- Chuck Taylor All Star Lift -->
-        <div class="product-card">
-            <img src="chuck-taylor-all-star-lift.jpg" alt="Chuck Taylor All Star Lift">
-            <h3>Chuck Taylor All Star Lift</h3>
-            <p>รองเท้าผ้าใบที่มาพร้อมพื้นรองเท้าสูง เพิ่มความโดดเด่นในการแต่งตัว</p>
-            <p class="price">2,800 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
+        <div class="product-grid">
+            {% for product in product_list %}
+            <div class="product-card">
+              <img src="{{product.images}}">
+              <h3>{{product.proname}}</h3>
+              <p>{{product.detail}}</p>
+              <p class="price">{{product.price}} บาท</p>
+              <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+            {% endfor %}
+            
+           
+    
+    
+          </div>
+       
     </div>
 </section>
 
@@ -315,6 +242,7 @@
         <img src="images/adidas-logo.png" alt="Adidas">
         <img src="images/converse-logo.png" alt="Converse">
         <img src="images/puma-logo.png" alt="Puma">
+        <img src="images/puma-logo.png" alt="OnitsukaTigera">
     </div>
 </section>
 

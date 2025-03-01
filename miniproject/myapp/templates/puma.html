@@ -216,95 +216,20 @@
     
     <div class="product-grid">
 
-        <!-- PUMA EVOLUTION RS-Z LTH -->
-        <div class="product-card">
-            <img src="puma-evolution-rs-z-lth.jpg" alt="PUMA EVOLUTION RS-Z LTH">
-            <h3>PUMA EVOLUTION RS-Z LTH</h3>
-            <p>รองเท้ากีฬาสไตล์คลาสสิกที่มาพร้อมดีไซน์เรียบหรู โทนสีขาว สามารถรองรับแรงกระแทกได้ดี บุภายในนุ่มสบายเท้า</p>
-            <p class="price">4,704 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+        <div class="product-grid">
+            {% for product in product_list %}
+            <div class="product-card">
+              <img src="{{product.images}}">
+              <h3>{{product.proname}}</h3>
+              <p>{{product.detail}}</p>
+              <p class="price">{{product.price}} บาท</p>
+              <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+            {% endfor %}
+            
+           
         </div>
-
-        <!-- PUMA First Mile Hybrid NX Ozone -->
-        <div class="product-card">
-            <img src="puma-first-mile-hybrid-nx-ozone.jpg" alt="PUMA First Mile Hybrid NX Ozone">
-            <h3>PUMA First Mile Hybrid NX Ozone</h3>
-            <p>รองเท้าออกกำลังกายที่ผลิตจากผ้าทอและวัสดุสังเคราะห์ น้ำหนักเบา สวมใส่สบาย มาพร้อมเทคโนโลยีโฟม HYBRID ที่ผสมผสานระหว่างโฟม IGNITE และ NRGY เพื่อความนุ่มสบายและรองรับแรงกระแทก</p>
-            <p class="price">3,500 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA Basics - Rebound Lay Up -->
-        <div class="product-card">
-            <img src="puma-basics-rebound-lay-up.jpg" alt="PUMA Basics - Rebound Lay Up">
-            <h3>PUMA Basics - Rebound Lay Up</h3>
-            <p>รองเท้าสไตล์บาสเกตบอลที่มีดีไซน์ทันสมัย ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้าทนทาน เหมาะสำหรับการสวมใส่ในชีวิตประจำวัน</p>
-            <p class="price">2,500 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA EVOLUTION - Cali Dream Go -->
-        <div class="product-card">
-            <img src="puma-evolution-cali-dream-go.jpg" alt="PUMA EVOLUTION - Cali Dream Go">
-            <h3>PUMA EVOLUTION - Cali Dream Go</h3>
-            <p>รองเท้าผ้าใบสำหรับผู้หญิงที่มีดีไซน์น่ารัก พื้นรองเท้ามั่นคง วัสดุแข็งแรง สวมใส่สบาย เหมาะสำหรับการออกกำลังกายหรือสวมใส่เป็นแฟชั่น</p>
-            <p class="price">3,520 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA RS-2K VON DUTCH -->
-        <div class="product-card">
-            <img src="puma-rs-2k-von-dutch.jpg" alt="PUMA RS-2K VON DUTCH">
-            <h3>PUMA RS-2K VON DUTCH</h3>
-            <p>รองเท้ารุ่นพิเศษที่ร่วมมือกับแบรนด์ VON DUTCH มาพร้อมดีไซน์โดดเด่น สีสันสดใส พื้นรองเท้าสบาย เหมาะสำหรับผู้ที่ชื่นชอบสไตล์แฟชั่น</p>
-            <p class="price">4,000 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA Roma Heart Metallic Wns -->
-        <div class="product-card">
-            <img src="puma-roma-heart-metallic-wns.jpg" alt="PUMA Roma Heart Metallic Wns">
-            <h3>PUMA Roma Heart Metallic Wns</h3>
-            <p>รองเท้าสไตล์วินเทจที่มาพร้อมดีไซน์หวานด้วยโบว์และสีเมทัลลิก ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้านุ่มสบาย</p>
-            <p class="price">3,000 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA KIDS - Rickie Alternative Closure -->
-        <div class="product-card">
-            <img src="puma-kids-rickie-alternative-closure.jpg" alt="PUMA KIDS - Rickie Alternative Closure">
-            <h3>PUMA KIDS - Rickie Alternative Closure</h3>
-            <p>รองเท้าสำหรับเด็กที่ออกแบบมาเพื่อความสะดวกสบาย มีระบบปิดแบบแถบเวลโคร สวมใส่ง่าย วัสดุทนทาน</p>
-            <p class="price">1,500 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA EVOLUTION RS-Fast Limiter -->
-        <div class="product-card">
-            <img src="puma-evolution-rs-fast-limiter.jpg" alt="PUMA EVOLUTION RS-Fast Limiter">
-            <h3>PUMA EVOLUTION RS-Fast Limiter</h3>
-            <p>รองเท้ากีฬาที่มาพร้อมดีไซน์ทันสมัย สีสันสดใส พื้นรองเท้ารองรับแรงกระแทกได้ดี เหมาะสำหรับการออกกำลังกายและสวมใส่ในชีวิตประจำวัน</p>
-            <p class="price">4,500 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA EVOLUTION - Pulsar Wedge Tonal -->
-        <div class="product-card">
-            <img src="puma-evolution-pulsar-wedge-tonal.jpg" alt="PUMA EVOLUTION - Pulsar Wedge Tonal">
-            <h3>PUMA EVOLUTION - Pulsar Wedge Tonal</h3>
-            <p>รองเท้าส้นตึกที่มาพร้อมดีไซน์โฉบเฉี่ยว สีสันโมโนโทน ผลิตจากวัสดุคุณภาพสูง พื้นรองเท้าทนทาน เหมาะสำหรับผู้ที่ต้องการความสูงและสไตล์</p>
-            <p class="price">3,800 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <!-- PUMA Storm Adrenaline -->
-        <div class="product-card">
-            <img src="puma-storm-adrenaline.jpg" alt="PUMA Storm Adrenaline">
-            <h3>PUMA Storm Adrenaline</h3>
-            <p>รองเท้ากีฬาที่มีดีไซน์โดดเด่น ผลิตจากผ้าตาข่ายและวัสดุสังเคราะห์ น้ำหนักเบา พื้นรองเท้ารองรับแรงกระแทกได้ดี เหมาะสำหรับการออกกำลังกายและสวมใส่ในชีวิตประจำวัน</p>
-            <p class="price">3,000 บาท</p>
-            <button class="btn-add-to-cart">เพิ่มลงตะกร้า</button>
-        </div>
+        
     </div>
 </section>
 
@@ -316,6 +241,7 @@
         <img src="images/adidas-logo.png" alt="Adidas">
         <img src="images/converse-logo.png" alt="Converse">
         <img src="images/puma-logo.png" alt="Puma">
+        <img src="images/puma-logo.png" alt="OnitsukaTigera">
     </div>
 </section>
 
